@@ -1,0 +1,14 @@
+[
+  {
+    "cliente": "Lestter Gabriel",
+    "status": "producao"
+  },
+  {
+    "cliente": "Lucas Pereira",
+    "status": "producao"
+  },
+  {
+    "cliente": "Luiz de Moraes",
+    "status": "rota"
+  }
+]

@@ -1,4 +1,4 @@
-import { serverHttp } from "./server/server";
+import { serverHttp } from './server/server';
 
 const PORT = process.env.PORT || 5050;
 

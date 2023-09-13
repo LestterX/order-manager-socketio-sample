@@ -7,7 +7,18 @@
   <title>Orders Sample | SocketIO</title>
 </head>
 <body>
-  <section id="cards"></section>
+  <section id="cards">
+
+    <section class="card">
+      <h3>Lestter Gabriel</h3>
+      <select name="status" id="status">
+        <option value="producao">Em Produção</option>
+        <option value="entregue">Entregue</option>
+        <option value="rota">A Caminho</option>
+      </select>
+    </section>
+
+  </section>
   <script src="/socket.io/socket.io.js"></script>
   <script src="./js/sockets.js"></script>
 </body>
