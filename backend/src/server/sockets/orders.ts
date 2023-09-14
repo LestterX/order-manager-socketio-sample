@@ -7,15 +7,27 @@ const cardOptions = ['producao', 'entregue', 'rota'];
 const cards = [
   {
     cliente: 'Lestter Gabriel',
-    status: 'Em Produção'
+    status: 'rota'
   },
   {
     cliente: 'Lucas Pereira',
-    status: 'Entregue'
+    status: 'entregue'
   },
   {
     cliente: 'Luiz de Moraes',
-    status: 'Em Rota de Entrega'
+    status: 'producao'
+  },
+  {
+    cliente: 'Daniel Luis',
+    status: 'producao'
+  },
+  {
+    cliente: 'Maria Oliveira',
+    status: 'rota'
+  },
+  {
+    cliente: 'Clara Alves',
+    status: 'rota'
   },
 ];
 
