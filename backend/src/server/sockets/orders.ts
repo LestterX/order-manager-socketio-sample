@@ -4,7 +4,7 @@ import { Server } from 'socket.io';
 
 const cardOptions = ['producao', 'entregue', 'rota'];
 
-const cards = [
+let cards = [
   {
     cliente: 'Lestter Gabriel',
     status: 'rota'
@@ -64,6 +64,15 @@ io.on('connection', (socket) => {
     cards.push(order);
     console.log(cards);
     
+    io.emit('get cards', cards);
+  });
+
+  socket.on('delete order', index => {
+    console.log(index);
+    index = Number(index.replace('index-', ''));
+    console.log(cards[index]);    
+    cards = cards.filter(card => card != cards[index]);
+    console.log(cards);
     io.emit('get cards', cards);
   });
 

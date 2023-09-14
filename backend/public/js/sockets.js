@@ -90,6 +90,13 @@ const createCard = (cliente, status, index) => {
   select.appendChild(option3);
   card.appendChild(select);
 
+  let bntDelete = document.createElement('div');
+  bntDelete.classList.add('bntDeleteOrders');
+  bntDelete.addEventListener('click', () => {
+    socket.emit('delete order', select.className);
+  });
+  card.appendChild(bntDelete);
+
   cardsSec.appendChild(card);
 };
 
