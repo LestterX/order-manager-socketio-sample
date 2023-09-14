@@ -6,7 +6,6 @@ let user = 'Carlos';
 
 socket.emit('get cards', user);
 socket.on('get cards', (cards) => {
-
   try {
     const allcards = document.querySelectorAll('.card');
     if (allcards.length > 0) {
@@ -24,8 +23,6 @@ socket.on('get cards', (cards) => {
     index++;
   }
 });
-
-
 
 const createCard = (cliente, status, index) => {
   let statusValue = 'producao';
