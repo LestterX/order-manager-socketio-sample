@@ -1,4 +1,8 @@
 /* eslint-disable no-undef */
+const orderOptions = document.querySelector('.orderOptions');
+const addOrderButton = document.querySelector('#add-order button');
+const clientNameSearch = document.querySelector('#client');
+
 const socket = io();
 const cardsSec = document.querySelector('#cards');
 
@@ -85,4 +89,39 @@ const createCard = (cliente, status, index) => {
   card.appendChild(select);
 
   cardsSec.appendChild(card);
+};
+
+clientNameSearch.addEventListener('keypress', (e) => {
+  if(clientNameSearch.value){
+    if(e.key === 'Enter'){
+      addOrder();
+    }
+  }
+});
+
+orderOptions.addEventListener('change', () => {
+  let value = orderOptions.selectedIndex;
+  let bColor;
+  switch (value) {
+  case 1 | '1':
+    bColor = 'yellow';
+    break;
+  case 2 | '2':
+    bColor = 'green';
+    break;
+  default:
+    bColor = 'red';
+    break;
+  }
+  orderOptions.style.backgroundColor = bColor;
+});
+
+addOrderButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  addOrder();
+});
+
+const addOrder = () => {
+
+  alert();
 };

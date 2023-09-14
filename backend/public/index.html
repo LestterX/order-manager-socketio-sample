@@ -7,6 +7,16 @@
   <title>Orders Sample | SocketIO</title>
 </head>
 <body>
+  <section id="add-order">
+    <input autofocus placeholder="NOME CLIENTE" type="text" id="client" name="client" minlength="2" maxlength="15">
+    <select name="orderOptions" class="orderOptions">
+      <option value="producao">Produção</option>
+      <option value="roto">A Caminho</option>
+      <option value="entregue">Entregue</option>
+    </select>
+    <button>CRIAR ORDEM</button>
+    <span class="nOrders">Ordens Criadas: 0</span>
+  </section>
   <section id="cards"></section>
   <script src="/socket.io/socket.io.js"></script>
   <script src="./js/sockets.js"></script>
