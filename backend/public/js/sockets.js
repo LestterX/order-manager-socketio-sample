@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const socket = io('http://localhost:5050');
+const socket = io();
 const cardsSec = document.querySelector('#cards');
 
 let user = 'Carlos';
