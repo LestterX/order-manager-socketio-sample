@@ -58,4 +58,13 @@ io.on('connection', (socket) => {
     io.emit('get cards', cards);
   });
 
+  socket.on('add order', order => {
+    console.log(order);
+    
+    cards.push(order);
+    console.log(cards);
+    
+    io.emit('get cards', cards);
+  });
+
 });

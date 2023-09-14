@@ -1,7 +1,8 @@
 /* eslint-disable no-undef */
-const orderOptions = document.querySelector('.orderOptions');
 const addOrderButton = document.querySelector('#add-order button');
+const orderOptions = document.querySelector('.orderOptions');
 const clientNameSearch = document.querySelector('#client');
+const nOrders = document.querySelector('.nOrders');
 
 const socket = io();
 const cardsSec = document.querySelector('#cards');
@@ -10,6 +11,7 @@ let user = 'Carlos';
 
 socket.emit('get cards', user);
 socket.on('get cards', (cards) => {
+  nOrders.textContent = `Ordens Criadas: ${cards.length}`;
   try {
     const allcards = document.querySelectorAll('.card');
     if (allcards.length > 0) {
@@ -122,6 +124,10 @@ addOrderButton.addEventListener('click', (e) => {
 });
 
 const addOrder = () => {
-
-  alert();
+  const cliente = clientNameSearch.value;
+  const status = orderOptions.value;
+  if(cliente != ''){
+    const order = {cliente, status};
+    socket.emit('add order', order);
+  }
 };
