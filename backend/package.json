@@ -2,7 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "MIT", 
+  "engines": {
+    "node": ">=17"
+  },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
     "build": "yarn install",
